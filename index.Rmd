@@ -36,21 +36,33 @@ editor_options:
 ---
 
 
-# Le projet
+## Le projet Rzine
 
-# Objectif
+Présentation
 
-# 2 volet
+## Objectifs
 
-# Organisatioo
+Liste des objectif
 
-# 1 site
+## 2 axes
 
-# Une collection
+Site et collection
 
-# Un outil de gestion et d'édition
+## Organisation membre/projet
 
+Graphique orga
 
+## Le site / administration
+
+Pres site
+
+## Une Collection
+
+Présentation + process
+
+## Git comme outil de gestion et d'édition
+
+?
 
 
 
@@ -76,7 +88,7 @@ editor_options:
 
 ## Projet exploratoire de la FR CIST
 
-<p class="smallpcenter" style="margin-top:50px;">Initié par 5 membres de la Fédération de Recherche partageant<br>une envie commune : **produire collectivement de la documentation sur R**.</p> 
+<p class="smallpcenter" style="margin-top:50px;">Initié par 5 membres de la Fédération de Recherche partageant<br>une envie commune : **produire collectivement de la documentation sur R**.</p>
 
 <img src="figure/core_team.png" width="600"/ style="margin-top:40px;margin-bottom:25px;">
 
@@ -93,7 +105,7 @@ editor_options:
 <p class="smallpcenter" style="margin-top:0px;">Points forts</p>
 <ul class="xpucsmall">
 > - Communauté internationale très active
-> - Des acteurs français notables 
+> - Des acteurs français notables
 > - Langage commun à plusieurs disciplines
 > - Beaucoup de ressources en libre accès
 > - De très bonnes initiatives existent
@@ -189,7 +201,7 @@ editor_options:
 <div id="right33" style="margin-top:0px;">
 <p style="margin-left:20px;"><span style="color:#4178bc;">Construit avec R :</span></p>
 <ul class="pucsmall0">
-> - Utilisation du package [blogdown <img src="figure/blogdown.png" width="35"/ style="margin-top:0px;margin-bottom:-10px;">](https://bookdown.org/yihui/blogdown/)  
+> - Utilisation du package [blogdown <img src="figure/blogdown.png" width="35"/ style="margin-top:0px;margin-bottom:-10px;">](https://bookdown.org/yihui/blogdown/)
 > - Site web statique [<img src="figure/hugo.png" width="40"/ style="margin-top:0px;margin-bottom:-10px;">](https://gohugo.io/) , thème [Academic](https://academic-demo.netlify.app/)
 </ul>
 </br>
@@ -204,18 +216,18 @@ editor_options:
 </div>
 
 <div id="right33" style="margin-top:00px;">
-<p style="margin-left:20px;"><span style="color:#4178bc;">Et libre !</span></p>  
+<p style="margin-left:20px;"><span style="color:#4178bc;">Et libre !</span></p>
 <ul class="pucsmall">
 > - Code source partagé sur le [<img src="figure/gitlab2.png" width="40"/ style="margin-top:0px;margin-bottom:-10px;">](https://gitlab.huma-num.fr/rzine/site) de [<img src="figure/humanum.png" width="180"/ style="margin-top:0px;margin-bottom:-12px;">](https://gitlab.huma-num.fr/rzine/site)
-> - Code source sous licence [<img src="figure/mit.png" width="45"/ style="margin-top:0px;margin-bottom:-12px;">](https://opensource.org/licenses/MIT)  
+> - Code source sous licence [<img src="figure/mit.png" width="45"/ style="margin-top:0px;margin-bottom:-12px;">](https://opensource.org/licenses/MIT)
 > - Un nom de domaine qui appartient au <img src="figure/cnrs.png" width="60"/ style="margin-top:0px;margin-bottom:-24px;">
 > - Site hébergé par l'université <img src="figure/rouen.jpg" width="120"/ style="margin-top:5px;margin-bottom:-10px;">
 </ul>
 </div>
 
-## 4 types de contenu 
+## 4 types de contenu
 
-<p style="margin-top:30px;margin-bottom:0px;font-size:90%;"> Qui dessinent les contours de la pratique de R en SHS</p> 
+<p style="margin-top:30px;margin-bottom:0px;font-size:90%;"> Qui dessinent les contours de la pratique de R en SHS</p>
 
 
 <div id="leftbg">
@@ -225,10 +237,10 @@ editor_options:
 
 <div id="rightbg">
 <ul style="margin-top:60px;margin-bottom:45px;">
-> - Des [actualités](https://rzine.fr/communaute/#posts)   
-> - Des [projets](https://rzine.fr/communaute/#projects)   
-> - Des [auteur.e.s](https://rzine.fr/communaute/#people)  
-> - Des [ressources](https://rzine.fr/publication/)   
+> - Des [actualités](https://rzine.fr/communaute/#posts)
+> - Des [projets](https://rzine.fr/communaute/#projects)
+> - Des [auteur.e.s](https://rzine.fr/communaute/#people)
+> - Des [ressources](https://rzine.fr/publication/)
 </ul>
 
 
@@ -239,7 +251,7 @@ editor_options:
 </div>
 
 
-## + de 300 [ressources](https://rzine.fr/publication/) 
+## + de 300 [ressources](https://rzine.fr/publication/)
 
 <img src="figure/ressources.png" width="800"/>
 
@@ -400,7 +412,7 @@ Soumission : [*contact@rzine.fr*](mailto:contact@rzine.fr)
 
 [<img src="figure/twitter.png" width="45"/ style="margin-top:150px;margin-bottom:-10px;margin-right:10px;">](https://gitlab.huma-num.fr/rzine/site)@rzine_shs
 
-## Diapositives libres (CC BY-SA 4.0) 
+## Diapositives libres (CC BY-SA 4.0)
 
 
 <br>
@@ -442,12 +454,12 @@ Soumission : [*contact@rzine.fr*](mailto:contact@rzine.fr)
 <br>
 <br>
 
-## R, Rstudio & package Rzine  
+## R, Rstudio & package Rzine
 
 
 <p class="smallbluep">A. Installez le package Rzine</p>
 
-```r 
+```r
 install.packages("remotes")
 remotes::install_gitlab("rzine/package", host = "https://gitlab.huma-num.fr/", force = TRUE)
 library("rzine")
@@ -463,11 +475,11 @@ library("rzine")
 
 <p class="smallbluep">C. Générez une fiche vierge :</p>
 
-```r 
-rmarkdown::draft(file = "index.Rmd", 
-                 template = "readrzine", 
-                 package = "rzine", 
-                 create_dir = FALSE, 
+```r
+rmarkdown::draft(file = "index.Rmd",
+                 template = "readrzine",
+                 package = "rzine",
+                 create_dir = FALSE,
                  edit = FALSE)
 ```
 
