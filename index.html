@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>index.knit</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  { color: #cccccc; background-color: #303030; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } /* Alert */
+code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #dca3a3; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #f0dfaf; } /* ControlFlow */
+code span.ch { color: #dca3a3; } /* Char */
+code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code span.co { color: #7f9f7f; } /* Comment */
+code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code span.do { color: #7f9f7f; } /* Documentation */
+code span.dt { color: #dfdfbf; } /* DataType */
+code span.dv { color: #dcdccc; } /* DecVal */
+code span.er { color: #c3bf9f; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #c0bed1; } /* Float */
+code span.fu { color: #efef8f; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+code span.kw { color: #f0dfaf; } /* Keyword */
+code span.op { color: #f0efd0; } /* Operator */
+code span.ot { color: #efef8f; } /* Other */
+code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code span.sc { color: #dca3a3; } /* SpecialChar */
+code span.ss { color: #cc9393; } /* SpecialString */
+code span.st { color: #cc9393; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #cc9393; } /* VerbatimString */
+code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/black.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="styles.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="index_files/header-attrs-2.11.2/header-attrs.js"></script>
+    <link href="index_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="index_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title"><h1 class="first">
+Rzine
+</h1></h1>
+    <h2 class="author"><h2 class="place">
+Pour la diffusion et le partage de ressources<br>sur la pratique de R en sciences humaines et sociales
+</h2></h2>
+    <h3 class="date"><img src="figure/Rzine.png" width="240" style="margin-bottom:0px;"/>
+<h2 class="place2">
+<i>Colloque Humanistica 2022</i>
+</h2>
+<p class="name">
+Rzine Core team
+</p>
+<img src="figure/cnrs.png" width="70" style="float:left;"/><img src="figure/cist-logo-bleu_sur_blanc.png" width="70" style="float:center"/><img src="figure/rouen.jpg" style="float:right;margin-top:40px;" width="115"/></h3>
+</section>
+
+<section id="le-projet" class="title-slide slide level1">
+<h1>Le projet</h1>
+
+</section>
+
+<section id="objectif" class="title-slide slide level1">
+<h1>Objectif</h1>
+
+</section>
+
+<section id="volet" class="title-slide slide level1">
+<h1>2 volet</h1>
+
+</section>
+
+<section id="organisatioo" class="title-slide slide level1">
+<h1>Organisatioo</h1>
+
+</section>
+
+<section id="site" class="title-slide slide level1">
+<h1>1 site</h1>
+
+</section>
+
+<section id="une-collection" class="title-slide slide level1">
+<h1>Une collection</h1>
+
+</section>
+
+<section id="un-outil-de-gestion-et-dédition" class="title-slide slide level1">
+<h1>Un outil de gestion et d’édition</h1>
+
+</section>
+
+<section>
+<section id="section" class="title-slide slide level1" data-background="figure/genese.png" data-background-size="400px">
+<h1 data-background="figure/genese.png" data-background-size="400px"></h1>
+<h2>
+<strong>Genèse du projet</strong>
+</h2>
+<p><br> <br> <br> <br> <br> <br> <br> <br><span style="color:#4178bc;"> <br> <br></p>
+</section>
+<section id="projet-exploratoire-de-la-fr-cist" class="slide level2">
+<h2>Projet exploratoire de la FR CIST</h2>
+<p class="smallpcenter" style="margin-top:50px;">
+Initié par 5 membres de la Fédération de Recherche partageant<br>une envie commune : <strong>produire collectivement de la documentation sur R</strong>.
+</p>
+<p><img src="figure/core_team.png" width="600"/ style="margin-top:40px;margin-bottom:25px;"></p>
+<p class="fragment" style="font-size:80%;">
+<strong>Objectif :</strong> <span style="color:#4178bc;">Contribuer à l’apprentissage et à la pratique de R en SHS, en favorisant le partage, la production et la diffusion de ressources.</span>
+</p>
+</section>
+<section id="faire-le-bilan-pour-innover" class="slide level2">
+<h2>Faire le bilan pour innover</h2>
+<p class="medpcenter" style="margin-top:50px;">
+Communauté d’utilisateur.rice.s et ressources disponibles sur R ?
+</p>
+<p><img src="figure/weakness_strength.jpg" width="500"/ style="margin-top:15px;margin-bottom:0px;"></p>
+<div id="left">
+<p class="smallpcenter" style="margin-top:0px;">
+Points forts
+</p>
+<ul class="xpucsmall">
+<ul>
+<li>Communauté internationale très active</li>
+<li>Des acteurs français notables</li>
+<li>Langage commun à plusieurs disciplines</li>
+<li>Beaucoup de ressources en libre accès</li>
+<li>De très bonnes initiatives existent</li>
+</ul>
+</ul>
+</div>
+<div id="right">
+<p class="smallpcenter" style="margin-top:0px;">
+Points d’amélioration
+</p>
+<ul class="xpucsmall">
+<ul>
+<li>Ressources parsemées, peu visibles</li>
+<li>Beaucoup en anglais, moins en français</li>
+<li>Cloisonnées par discipline, institutions…</li>
+<li>Ressources généralistes vs spécialisées</li>
+</ul>
+</ul>
+</div>
+</section>
+<section id="émergence-de-deux-axes-de-travail" class="slide level2">
+<h2>Émergence de deux axes de travail</h2>
+<div id="left">
+<p class="moyp3" style="margin-top:50px;">
+Prendre en compte l’existant
+</p>
+<img src="figure/rzine1.png" width="200"/ style="margin-top:30px;margin-bottom:25px;">
+<p style="margin-top:0px;">
+<span style="color:#4178bc;"><a href="https://rzine.fr/"><strong>Rzine.fr</strong></a></span>
+</p>
+</div>
+<div id="right">
+<p class="moyp3" style="margin-top:50px;">
+Favoriser la production
+</p>
+<img src="figure/rzine2.png" width="200"/ style="margin-top:30px;margin-bottom:25px;">
+<p style="margin-top:0px;">
+<span style="color:#4178bc;"><a href="https://rzine.fr/collection/#collection"><strong>Collection Rzine</strong></a></span>
+</p>
+</div>
+</section>
+<section id="du-renfort" class="slide level2">
+<h2>Du renfort</h2>
+<p class="moyp3" style="margin-top:0px;">
+5 ingénieur·e·s ont rejoint le projet Rzine
+</p>
+<p><img src="figure/core_team_full.png" width="650"/ style="margin-top:50px;margin-bottom:25px;"></p>
+</section>
+<section id="organisation" class="slide level2">
+<h2>Organisation</h2>
+<p><img src="figure/organisation.png" width="750"/ style="margin-top:30px;margin-bottom:25px;"></p>
+</section>
+<section id="organisation-1" class="slide level2">
+<h2>Organisation</h2>
+<p><img src="figure/organisation1.png" width="750"/ style="margin-top:30px;margin-bottom:25px;"></p>
+</section>
+<section id="organisation-2" class="slide level2">
+<h2>Organisation</h2>
+<p><img src="figure/organisation2.png" width="750"/ style="margin-top:30px;margin-bottom:25px;"></p>
+</section></section>
+<section>
+<section id="section-1" class="title-slide slide level1" data-background="figure/rzine_logo_bis.png" data-background-size="300px">
+<h1 data-background="figure/rzine_logo_bis.png" data-background-size="300px"></h1>
+<h2>
+<strong>Rzine.fr</strong>
+</h2>
+<p><br> <br> <br> <br> <br> <br> <br> <br></p>
+<p class="medpcenter">
+<em>Valoriser et partager l’existant</em>
+</p>
+</section>
+<section id="rzine.fr" class="slide level2">
+<h2>Rzine.fr</h2>
+<div>
+<div id="left3">
+<p><img src="figure/R.png" width="195"/ style="margin-top:0px;"></p>
+</div>
+<div id="right33" style="margin-top:0px;">
+<p style="margin-left:20px;">
+<span style="color:#4178bc;">Construit avec R :</span>
+</p>
+<ul class="pucsmall0">
+<ul>
+<li>Utilisation du package <a href="https://bookdown.org/yihui/blogdown/">blogdown <img src="figure/blogdown.png" width="35"/ style="margin-top:0px;margin-bottom:-10px;"></a><br />
+</li>
+<li>Site web statique <a href="https://gohugo.io/"><img src="figure/hugo.png" width="40"/ style="margin-top:0px;margin-bottom:-10px;"></a> , thème <a href="https://academic-demo.netlify.app/">Academic</a></li>
+</ul>
+</ul>
+<p></br></p>
+</div>
+</div>
+<p></br></p>
+<div id="left3">
+<p><img src="figure/lock4.png" width="180"/ style="margin-top:50px;"></p>
+</div>
+<div id="right33" style="margin-top:00px;">
+<p style="margin-left:20px;">
+<span style="color:#4178bc;">Et libre !</span>
+</p>
+<ul class="pucsmall">
+<ul>
+<li>Code source partagé sur le <a href="https://gitlab.huma-num.fr/rzine/site"><img src="figure/gitlab2.png" width="40"/ style="margin-top:0px;margin-bottom:-10px;"></a> de <a href="https://gitlab.huma-num.fr/rzine/site"><img src="figure/humanum.png" width="180"/ style="margin-top:0px;margin-bottom:-12px;"></a></li>
+<li>Code source sous licence <a href="https://opensource.org/licenses/MIT"><img src="figure/mit.png" width="45"/ style="margin-top:0px;margin-bottom:-12px;"></a><br />
+</li>
+<li>Un nom de domaine qui appartient au <img src="figure/cnrs.png" width="60"/ style="margin-top:0px;margin-bottom:-24px;"></li>
+<li>Site hébergé par l’université <img src="figure/rouen.jpg" width="120"/ style="margin-top:5px;margin-bottom:-10px;"></li>
+</ul>
+</ul>
+</div>
+</section>
+<section id="types-de-contenu" class="slide level2">
+<h2>4 types de contenu</h2>
+<p style="margin-top:30px;margin-bottom:0px;font-size:90%;">
+Qui dessinent les contours de la pratique de R en SHS
+</p>
+<div id="leftbg">
+<p><img src="figure/rzinefr.png" width="560"/></p>
+</div>
+<div id="rightbg">
+<ul style="margin-top:60px;margin-bottom:45px;">
+<ul>
+<li>Des <a href="https://rzine.fr/communaute/#posts">actualités</a><br />
+</li>
+<li>Des <a href="https://rzine.fr/communaute/#projects">projets</a><br />
+</li>
+<li>Des <a href="https://rzine.fr/communaute/#people">auteur.e.s</a><br />
+</li>
+<li>Des <a href="https://rzine.fr/publication/">ressources</a></li>
+</ul>
+</ul>
+<p style="text-align:center;">
+Signalement :</br><a href="mailto:contact@rzine.fr" class="email">contact@rzine.fr</a>
+</p>
+</div>
+</section>
+<section id="de-300-ressources" class="slide level2">
+<h2>+ de 300 <a href="https://rzine.fr/publication/">ressources</a></h2>
+<p><img src="figure/ressources.png" width="800"/></p>
+</section>
+<section id="site-statique-et-participatif" class="slide level2">
+<h2>Site statique et participatif</h2>
+<p><img src="figure/How_works_Rzine.png" style="margin-top:40px;" width="750"/></p>
+</section></section>
+<section>
+<section id="section-2" class="title-slide slide level1" data-background="figure/Rzine.png" data-background-size="300px">
+<h1 data-background="figure/Rzine.png" data-background-size="300px"></h1>
+<h2>
+<strong>La collection Rzine</strong>
+</h2>
+<p><br> <br> <br> <br> <br> <br> <br> <br></p>
+<p class="smallpcenter">
+<em>Partager des méthodes et analyses reproductibles réalisées avec R</em>
+</p>
+</section>
+<section id="caractéristiques" class="slide level2">
+<h2>Caractéristiques ?</h2>
+<p><br></p>
+<ul class="pucsmall">
+<ul>
+<li>Collection <span style="color:#4178bc;"><strong>ouverte à tou·te·s</strong></span></li>
+<li>Périmètre <span style="color:#4178bc;"><strong>interdisciplinaire</strong></span> (SHS et sciences territoriales)</li>
+<li>Format de publication <span style="color:#4178bc;"><strong>notebook</strong></span> (Rmarkdown)</li>
+<li>Publications <span style="color:#4178bc;"><strong>soumises à comité de lecture</strong></span></li>
+<li>Processus de <span style="color:#4178bc;"><strong>relecture transparent</strong></span> sur <span style="color:#4178bc;"><strong>GitHub/GitLab</strong></span></li>
+<li>Processus de <span style="color:#4178bc;"><strong>d’édition</strong></span> sur <span style="color:#4178bc;"><strong>GitHub/GitLab</strong></span></li>
+<li>Publications <span style="color:#4178bc;"><strong>open source</strong></span> (licences <span style="color:#4178bc;"><a href="https://opensource.org/licenses/MIT"><strong>MIT</strong></a></span> &amp; <span style="color:#4178bc;"><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr"><strong>CC BY-SA 4.0</strong></a></span>)</li>
+<li>Informations + données nécessaires à la <span style="color:#4178bc;"><strong>reproductibilité</strong></span> fournies</li>
+<li>Stockage et diffusion assurés (<span style="color:#4178bc;"><strong>DOI</strong></span>, <span style="color:#4178bc;"><strong>HAL</strong></span>, <span style="color:#4178bc;">Nakala</span> ?)</li>
+</ul>
+</ul>
+<p class="fragment" style="font-size:95%;margin-top:65px;">
+Un type de publication : <span style="color:#4178bc;"><a href="https://rzine.fr/collection/#publi_rzine"><strong>la fiche Rzine</strong></a></span>
+</p>
+</section>
+<section id="pour-quoi-faire" class="slide level2">
+<h2>Pour quoi faire ?</h2>
+<p style="font-size:75%;margin-top:50px;">
+<span style="color:#4178bc;"><strong>1.</strong></span> <strong>Offrir un espace de publication</strong> innovant qui permet à tout·te·s de valoriser, partager et diffuser ses méthodes et analyses réalisées avec R.
+</p>
+<p style="font-size:75%;margin-top:50px;">
+<span style="color:#4178bc;"><strong>2.</strong></span> Participer à la <strong>montée en compétence collective de la pratique de R</strong> en SHS et favoriser les <strong>échanges entre disciplines</strong>.
+</p>
+<p style="font-size:75%;margin-top:50px;">
+<span style="color:#4178bc;"><strong>3.</strong></span> Contribuer à la <strong>diffusion de méthodes innovantes ou restées confidentielles, et des bonnes pratiques en matière de reproductibilité</strong>.
+</p>
+<p style="font-size:75%;margin-top:50px;">
+<span style="color:#4178bc;"><strong>4.</strong></span> Participer à la démocratisation de l’<strong>utilisation de la programmation lettrée</strong> (R Markdown) et des <strong>logiciels décentralisés de versionnage</strong> (Git) en SHS.
+</p>
+<p class="fragment" style="font-size:83%;margin-top:60px;">
+<span style="color:#4178bc;"><strong>L’ouverture de la science ne se limite pas aux données et aux articles !</strong></span>
+</p>
+</section>
+<section id="une-fiche-rzine" class="slide level2">
+<h2>Une fiche Rzine ?</h2>
+<p></br></p>
+<div>
+<div id="left4" style="margin-top:0px;">
+<p><img src="figure/figure_3.png" width="300"/ style="margin-top:0px;"> <img src="figure/figure_5.png" width="300"/ style="margin-top:0px;"></p>
+</div>
+<div id="right4">
+<p style="padding-top:35px;font-size:75%;text-align:left;">
+Document qui <strong>présente une méthodologie, un type d’analyse, une fonctionnalité, ou encore le traitement</strong> d’un certain type de données réalisé avec R, <strong>de façon reproductible et didactique</strong> afin d’en faciliter son application pratique.
+</p>
+<p style="padding-top:60px;font-size:75%;text-align:left;">
+Une fiche peut être fortement axée sur un aspect technique ou méthodologique, mais elle doit <strong>impérativement s’ancrer dans une thématique</strong> des sciences humaines et sociales.
+</p>
+</ul>
+</div>
+</div>
+</section>
+<section id="rédiger-une-fiche" class="slide level2">
+<h2>Rédiger une fiche</h2>
+<li style="font-size:81%;text-align:left;margin-top:45px;">
+Règles de mise en page et de soumission expliquées dans <a href="https://rzine-reviews.github.io/documentation/#content"><strong>ce document</strong></a>
+</li>
+<p><img src="figure/collect.png" width="600" style="margin-top:0px;"></p>
+<li style="font-size:81%;text-align:left;margin-top30px;">
+Modèle de mise en page (rmarkdown) fourni par le <span style="color:#4178bc;"><a href="https://gitlab.huma-num.fr/rzine/package">package <strong><code>Rzine</code></strong></a></span>
+</li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;remotes&quot;)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_gitlab</span>(<span class="st">&quot;rzine/package&quot;</span>, <span class="at">host =</span> <span class="st">&quot;https://gitlab.huma-num.fr/&quot;</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Générer une fiche vierge (POSSIBLE en CLIC-BOUTON avec RSTUDIO)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">draft</span>(<span class="at">file =</span> <span class="st">&quot;index.Rmd&quot;</span>, <span class="at">template =</span> <span class="st">&quot;readrzine&quot;</span>, <span class="at">package =</span> <span class="st">&quot;rzine&quot;</span>, <span class="at">create_dir =</span> <span class="cn">FALSE</span>, <span class="at">edit =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+</section>
+<section id="processus-de-relecture-et-dédition" class="slide level2">
+<h2>Processus de relecture et d’édition</h2>
+<p><img src="figure/Rzine_06.png" width="550" style="margin-top:10px;"></p>
+</section>
+<section id="premières-fiches-publiées" class="slide level2">
+<h2>Premières fiches publiées</h2>
+<p></br></p>
+<ul class="pucsmall2" style="margin-top:20px;">
+<ul>
+<li><a href="https://rzine.fr/docs/20211101_ysebaert_grasland_MTA/index.html" target="_blank">Analyse territoriale multiscalaire</a>, <em>R. Ysebaert</em> et <em>C. Grasland</em>.</li>
+<li><a href="https://rzine.fr/docs/20191125_ironcurtain/index.html" target="_blank">Le nouveau rideau de fer : un exemple de carte en 2,5D</a>, <em>N. Lambert</em>.</li>
+<li><a href="https://rzine.fr/docs/20200526_glecampion_initiation_aux_correlations/index.html" target="_blank">Analyse des corrélations avec easystats</a>, <em>G. Le Campion</em>.</li>
+<li><a href="https://rzine.fr/docs/20200601_mletexier86_explo_spatiotemporel/index.html" target="_blank">Exploration spatio-temporelle d’objets géographiques ponctuels</a>, <em>M. Le Texier</em>.</li>
+</ul>
+</ul>
+<p><img src="figure/figure_6.png" alt="drawing" style="width:210px;margin-top:60px;"/> <img src="figure/figure_3.png" alt="drawing" style="width:220px;margin-left:20px;margin-top:60px;"/> <img src="figure/figure_7.png" alt="drawing" style="width:210px;margin-left:20px;margin-top:60px;"/> <img src="figure/figure_5.png" alt="drawing" style="width:205px;margin-left:20px;margin-top:60px;"/></p>
+</section>
+<section id="à-vous-de-jouer" class="slide level2">
+<h2>À vous de jouer !</h2>
+<p></br> </br></p>
+<p>Documentation : <a href="https://rzine-reviews.github.io/documentation/"><em>Publier une fiche Rzine</em></a></p>
+<p></br></p>
+<p>Soumission : <a href="mailto:contact@rzine.fr"><em>contact@rzine.fr</em></a></p>
+<p><a href="https://gitlab.huma-num.fr/rzine/site"><img src="figure/twitter.png" width="45"/ style="margin-top:150px;margin-bottom:-10px;margin-right:10px;"></a><span class="citation" data-cites="rzine_shs">@rzine_shs</span></p>
+</section>
+<section id="diapositives-libres-cc-by-sa-4.0" class="slide level2">
+<h2>Diapositives libres (CC BY-SA 4.0)</h2>
+<p><br></p>
+<p class="moyp">
+Diaporama :
+</p>
+<p class="moyp222">
+<a href="https://huguespecout.github.io/projet_rzine/#/" class="uri">https://huguespecout.github.io/projet_rzine/#/</a>
+</p>
+<p><br></p>
+<p class="moyp">
+Code source :
+</p>
+<p class="moyp222">
+<a href="https://github.com/HuguesPecout/projet_rzine" class="uri">https://github.com/HuguesPecout/projet_rzine</a>
+</p>
+<p><br></p>
+</section></section>
+<section>
+<section id="section-3" class="title-slide slide level1" data-background="figure/exo.png" data-background-size="1000px">
+<h1 data-background="figure/exo.png" data-background-size="1000px"></h1>
+<h2>
+<strong>Exercice !</strong>
+</h2>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+</section>
+<section id="r-rstudio-package-rzine" class="slide level2">
+<h2>R, Rstudio &amp; package Rzine</h2>
+<p class="smallbluep">
+A. Installez le package Rzine
+</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_gitlab</span>(<span class="st">&quot;rzine/package&quot;</span>, <span class="at">host =</span> <span class="st">&quot;https://gitlab.huma-num.fr/&quot;</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;rzine&quot;</span>)</span></code></pre></div>
+<p class="smallpcenter1">
+<img src="figure/alert.png" width="30"/ style="margin-top:0px;margin-bottom:-7px;margin-right:8px;"><em>Sur Windows, il peut être nécessaire d’installer <a href="https://cran.r-project.org/bin/windows/Rtools/">rtools</a> pour utiliser le package <code>remotes</code></em>.
+</p>
+<p class="smallbluep">
+B. Créez un projet Rstudio
+</p>
+<p class="smallpcenter11">
+Dans la barre de menu Rstudio, cliquez sur <strong><em>File</em></strong>/<strong><em>New Project</em></strong>/<strong><em>New Directory</em></strong>/<strong><em>New Project</em></strong>….
+</p>
+<p class="smallbluep">
+C. Générez une fiche vierge :
+</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">draft</span>(<span class="at">file =</span> <span class="st">&quot;index.Rmd&quot;</span>, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">template =</span> <span class="st">&quot;readrzine&quot;</span>, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">package =</span> <span class="st">&quot;rzine&quot;</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">create_dir =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">edit =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p class="smallpcenter1">
+En clic-bouton : <strong><em>File</em></strong>/<strong><em>New File</em></strong>/<strong><em>R Markdown</em></strong>/<strong><em>From Template</em></strong>, choisir ‘<strong><em>readrzine - Template pour fiche rzine</em></strong>’
+</p>
+</section>
+<section id="fichiers-répertoires-associés-à-une-fiche" class="slide level2">
+<h2>Fichiers &amp; répertoires associés à une fiche</h2>
+<p><img src="figure/fiche_folder.png" alt="drawing" style="width:250px;"/></p>
+</section>
+<section id="tricotez-knitez" class="slide level2">
+<h2>Tricotez (knitez) !</h2>
+<p><img src="figure/new_fiche.png" alt="drawing" style="width:1100px;"/></p>
+</section>
+<section id="sortie-html" class="slide level2">
+<h2>Sortie HTML</h2>
+<p><img src="figure/final.png" alt="drawing" style="width:1100px;"/></p>
+</section>
+<section id="à-vous-de-jouer-1" class="slide level2">
+<h2>À vous de jouer !</h2>
+<p></br> </br></p>
+<p>Documentation : <a href="https://rzine-reviews.github.io/documentation/"><em>Publier une fiche Rzine</em></a></p>
+<p></br></p>
+<p>Soumission : <a href="mailto:contact@rzine.fr"><em>contact@rzine.fr</em></a></p>
+<p><a href="https://gitlab.huma-num.fr/rzine/site"><img src="figure/twitter.png" width="45"/ style="margin-top:150px;margin-bottom:-10px;margin-right:10px;"></a><span class="citation" data-cites="rzine_shs">@rzine_shs</span></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Hides the address bar on mobile devices
+        hideAddressBar: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        menu: {
+   
+    
+    
+    
+    
+    
+    
+ 
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
