@@ -101,7 +101,9 @@ editor_options:
 
 <p class="moyp3" style="margin-top:0px;">5 ingénieur·e·s ont rejoint le projet Rzine</p>
 
-<img src="figure/core_team_full.png" width="650"/ style="margin-top:50px;margin-bottom:25px;">
+<img src="figure/core_team_full.png" width="650"/ style="margin-top:30px;margin-bottom:0px;">
+
+<p  style="font-size:80%;margin-top:0px;">Et 30% de temps d'ingénieur de la FR alloué au projet</p>
 
 
 ## Organisation
@@ -303,30 +305,6 @@ editor_options:
 </div>
 
 
-## Rédiger une fiche
-
-<li style="font-size:81%;text-align:left;margin-top:45px;">Règles de mise en page et de soumission expliquées dans [**ce document**](https://rzine-reviews.github.io/documentation/#content)</li>
-
-
-<img src="figure/collect.png" width="600" style="margin-top:0px;">
-
-
-
-<li style="font-size:81%;text-align:left;margin-top30px;">Modèle de mise en page (rmarkdown) fourni par le <span style="color:#4178bc;"><a href="https://gitlab.huma-num.fr/rzine/package">package **`Rzine`**</a></span></li>
-
-```{r, eval=FALSE}
-
-# install.packages("remotes")
-remotes::install_gitlab("rzine/package", host = "https://gitlab.huma-num.fr/", force = TRUE)
-
-# Générer une fiche vierge (POSSIBLE en CLIC-BOUTON avec RSTUDIO)
-rmarkdown::draft(file = "index.Rmd", template = "readrzine", package = "rzine", create_dir = FALSE, edit = FALSE)
-
-```
-
-
-
-
 
 
 ## Processus de relecture et d'édition sur GitHub
@@ -352,7 +330,7 @@ rmarkdown::draft(file = "index.Rmd", template = "readrzine", package = "rzine", 
 <img src="figure/figure_5.png" alt="drawing" style="width:205px;margin-left:20px;margin-top:60px;"/>
 
 
-## Merci de votre attention
+## 
 
 <p style="margin-top:70px;font-size:85%;margin-bottom:0px;">**Diapositives libres** (CC BY-SA 4.0)</p>
 <p style="margin-top:10px;font-size:65%;margin-bottom:0px;">**Slides** : https://huguespecout.github.io/projet_rzine/#/</p>
